@@ -13,25 +13,25 @@
     <body>
         <header>
             {% block header %}
-                <nav>
+                <nav id="header">
                     <ul class="row">
                         <li class="col-1">
                             <a href="{{ path('accueil') }}"><img src="{{asset('img/home.png')}}" id="logo_accueil"></a>
                         </li>
                         <li class="col-2">
-                            <a href="#">Chevaux</a>
+                            <a href="{{ path('chevaux') }}">Chevaux</a>
                         </li>
                         <li class="col-2">
-                            <a href="#">Hippodromes</a>
+                            <a href="{{ path('hippodromes') }}">Hippodromes</a>
                         </li>
                         <li class="col-2">
-                            <a href="#">Historique</a>
+                            <a href="{{ path('historique') }}">Historique</a>
                         </li>
                         <li class="col-2">
-                            <a href="#">Connexion</a>
+                            <a href="{{ path('login') }}">Connexion</a>
                         </li>
                     </ul>
-                    </nav>
+                </nav>
             {% endblock %}
         </header>
 
@@ -40,7 +40,24 @@
         </main>
 
         <footer>
-            {% block footer %}{% endblock %}
+            {% block footer %}
+                <nav id="footer">
+                    <ul class="row">
+                        <li class="offset-2 col-5">
+                            <a href="{{ path('chevaux') }}">Mentions légales</a>
+                        </li>
+                        <li class="col-1">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="col-1">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="col-1">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            {% endblock %}
         </footer>
 
         {% block javascripts %}

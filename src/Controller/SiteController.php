@@ -24,4 +24,38 @@ class SiteController extends Controller
     {
         return $this->render('site/accueil.html.twig');
     }
+
+    /**
+     * @Route("/chevaux", name="chevaux")
+     */
+    public function chevaux()
+    {
+        return $this->render('site/chevaux.html.twig');
+    }
+
+    /**
+     * @Route("/hippodromes", name="hippodromes")
+     */
+    public function hippodromes()
+    {
+        return $this->render('site/hippodromes.html.twig');
+    }
+
+    /**
+     * @Route("/historique", name="historique")
+     */
+    public function historique()
+    {
+        return $this->render('site/historique.html.twig');
+    }
+
+    /**
+     * @Route("/login", name="login")
+     */
+    public function login()
+    {
+        return $this->render('security/login.html.twig');
+    }
+
+    
 }
