@@ -70,3 +70,29 @@ footer {
     background-size: cover;
     height: calc(100vh - 105px);
 }
+
+
+/* registration.html.twig */
+
+#main_registration {
+    height: calc(100vh - 105px);
+    padding: 5%;
+    background-color: #948c81;
+    color: white;
+    font-family: 'Oleo Script', sans-serif;
+}
+
+
+/* login.html.twig */
+
+#main_login {
+    height: calc(100vh - 105px);
+    padding: 5%;
+    background-color: #948c81;
+    color: white;
+    font-family: 'Oleo Script', sans-serif;
+}
+
+#logo_logout {
+    height: 60px;
+}

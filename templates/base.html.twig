@@ -27,9 +27,16 @@
                         <li class="col-2">
                             <a href="{{ path('historique') }}">Historique</a>
                         </li>
+                        {% if not app.user %}
                         <li class="col-2">
-                            <a href="{{ path('login') }}">Connexion</a>
+                            <a href="{{ path('security_login') }}">Connexion</a>
                         </li>
+                        {% else %}
+                        <li class="col-5">
+                            Bonjour {{ app.user.username }} / 
+                            <a href="{{ path('security_logout') }}"><img src="{{asset('img/logout.png')}}" id="logo_logout"></a>
+                        </li>
+                        {% endif %}
                     </ul>
                 </nav>
             {% endblock %}
