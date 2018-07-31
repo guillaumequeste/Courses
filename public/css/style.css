@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script');
+header {
+    height: 10vh;
+    background-color: #2C3E50;
+    color: white;
+    font-family: 'Oleo Script', sans-serif;
+    font-size: medium;
+}
+
+nav {
+    text-align: center;
+}
+
+ul {
+    display: inline-flex;
+    line-height: 10vh;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#logo_accueil {
+    width: 60%;
+}
+
+@media screen and (min-width: 800px) {
+    header {
+        font-size: x-large;
+    }
+}

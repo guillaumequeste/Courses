@@ -12,7 +12,27 @@
 
     <body>
         <header>
-            {% block header %}{% endblock %}
+            {% block header %}
+                <nav>
+                    <ul class="row">
+                        <li class="col-1">
+                            <a href="{{ path('accueil') }}"><img src="{{asset('img/home.png')}}" id="logo_accueil"></a>
+                        </li>
+                        <li class="col-2">
+                            <a href="#">Chevaux</a>
+                        </li>
+                        <li class="col-2">
+                            <a href="#">Hippodromes</a>
+                        </li>
+                        <li class="col-2">
+                            <a href="#">Historique</a>
+                        </li>
+                        <li class="col-2">
+                            <a href="#">Connexion</a>
+                        </li>
+                    </ul>
+                    </nav>
+            {% endblock %}
         </header>
 
         <main>
