@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Cheval;
 use App\Form\ChevalType;
+use App\Entity\Hippodrome;
+use App\Form\HippodromeType;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Routing\Annotation\Route;
@@ -85,6 +87,28 @@ class SiteController extends Controller
         }
 
         return $this->render('site/newCheval.html.twig', ['formCheval' => $formCheval->createView()]);
+    }
+
+     /**
+     * @Route("/newHippodrome", name="newHippodrome")
+     */
+    public function createHippodrome(Request $request, ObjectManager $manager) {
+        $hippodrome = new Hippodrome();
+
+        $formHippodrome = $this->createForm(HippodromeType::class, $hippodrome);
+        
+        $formHippodrome->handleRequest($request);
+
+        if($formHippodrome->isSubmitted() && $formHippodrome->isValid()) {
+            $hippodrome->setCreatedAt(new \DateTime("now"));
+
+            $manager->persist($hippodrome);
+            $manager->flush();
+
+            return $this->redirectToRoute('newHippodrome');
+        }
+
+        return $this->render('site/newHippodrome.html.twig', ['formHippodrome' => $formHippodrome->createView()]);
     }
 
     

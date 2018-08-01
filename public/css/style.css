@@ -107,3 +107,36 @@ footer {
     color: white;
     font-family: 'Oleo Script', sans-serif;
 }
+
+
+/* newCheval.html.twig */
+
+#main_newCheval {
+    height: calc(100vh - 105px);
+    padding: 5%;
+    background-color: #948c81;
+    color: white;
+    font-family: 'Oleo Script', sans-serif;
+}
+
+
+/* hippodromes.html.twig */
+
+#main_hippodromes {
+    height: calc(100vh - 105px);
+    padding: 5%;
+    background-color: #948c81;
+    color: white;
+    font-family: 'Oleo Script', sans-serif;
+}
+
+
+/* newHippodrome.html.twig */
+
+#main_newHippodrome {
+    height: 120vh;
+    padding: 5%;
+    background-color: #948c81;
+    color: white;
+    font-family: 'Oleo Script', sans-serif;
+}

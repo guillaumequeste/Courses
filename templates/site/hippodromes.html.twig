@@ -3,5 +3,10 @@
 {% block title %}Hippodromes{% endblock %}
 
 {% block main %}
-    <h1>Hippodromes</h1>
+    <div id="main_hippodromes">
+        <h1>Hippodromes</h1>
+
+        <a href="{{ path('newHippodrome') }}"><button class="btn btn-success">Enregistrer un nouvel hippodrome</button></a>
+
+    </div>
 {% endblock %}

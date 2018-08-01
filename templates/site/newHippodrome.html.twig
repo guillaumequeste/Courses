@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Enregistrer un hippodrome{% endblock %}
+
+{% block main %}
+    <div id="main_newHippodrome">
+        <h1>Enregistrement d'un hippodrome</h1>
+
+        {{ form_start(formHippodrome) }}
+        {{ form_row(formHippodrome.nom, {'label': 'Nom', 'attr': {'placeholder': 'Nom'}}) }}
+        {{ form_row(formHippodrome.piste, {'label': 'Piste', 'attr': {'placeholder': 'Piste'}}) }}
+        {{ form_row(formHippodrome.corde, {'label': 'Corde', 'attr': {'placeholder': 'Corde'}}) }}
+        {{ form_row(formHippodrome.circonference, {'label': 'Circonférence', 'attr': {'placeholder': 'Circonférence'}}) }}
+        {{ form_row(formHippodrome.region, {'label': 'Région', 'attr': {'placeholder': 'Région'}}) }}
+        {{ form_row(formHippodrome.departement, {'label': 'Département', 'attr': {'placeholder': 'Département'}}) }}
+        {{ form_row(formHippodrome.ville, {'label': 'Ville', 'attr': {'placeholder': 'Ville'}}) }}
+        {{ form_row(formHippodrome.surnom, {'label': 'Surnom', 'attr': {'placeholder': 'Surnom'}}) }}
+        <button type="submit" class="btn btn-success">Enregistrement</button>
+        {{ form_end(formHippodrome) }}
+
+    </div>
+{% endblock %}
