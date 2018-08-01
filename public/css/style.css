@@ -124,7 +124,7 @@ footer {
 /* hippodromes.html.twig */
 
 #main_hippodromes {
-    height: calc(100vh - 105px);
+    height: 400vh;
     padding: 1% 5% 5% 5%;
     background-color: #948c81;
     color: white;
@@ -153,8 +153,8 @@ thead {
 /* newHippodrome.html.twig */
 
 #main_newHippodrome {
-    height: 120vh;
-    padding: 5%;
+    height: 110vh;
+    padding: 1% 5% 5% 5%;
     background-color: #948c81;
     color: white;
     font-family: 'Oleo Script', sans-serif;
