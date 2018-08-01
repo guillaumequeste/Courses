@@ -5,8 +5,34 @@
 {% block main %}
     <div id="main_hippodromes">
         <h1>Hippodromes</h1>
-
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Piste</th>
+                <th scope="col">Corde</th>
+                <th scope="col">Circonférence</th>
+                <th scope="col">Région</th>
+                <th scope="col">Département</th>
+                <th scope="col">Ville</th>
+                <th scope="col">Surnom</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for hippodrome in hippodromes %}
+                <tr>
+                <th scope="row"><a href="{{ path('hippodrome_detail', {'id': hippodrome.id}) }}" class="a_table">{{ hippodrome.nom }}</a></th>
+                <th scope="row">{{ hippodrome.piste }}</th>
+                <th scope="row">{{ hippodrome.corde }}</th>
+                <th scope="row">{{ hippodrome.circonference }}</th>
+                <th scope="row">{{ hippodrome.region }}</th>
+                <th scope="row">{{ hippodrome.departement }}</th>
+                <th scope="row">{{ hippodrome.ville }}</th>
+                <th scope="row">{{ hippodrome.surnom }}</th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
         <a href="{{ path('newHippodrome') }}"><button class="btn btn-success">Enregistrer un nouvel hippodrome</button></a>
-
     </div>
 {% endblock %}

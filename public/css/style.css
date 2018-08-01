@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Oleo+Script');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* base.html.twig */
 
@@ -124,10 +125,28 @@ footer {
 
 #main_hippodromes {
     height: calc(100vh - 105px);
-    padding: 5%;
+    padding: 1% 5% 5% 5%;
     background-color: #948c81;
     color: white;
     font-family: 'Oleo Script', sans-serif;
+}
+
+.table {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+thead {
+    color: #2C3E50;
+    font-size: large;
+}
+
+.a_table {
+    color: black;
+}
+
+.a_table:hover {
+    color: yellow;
 }
 
 

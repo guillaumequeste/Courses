@@ -42,9 +42,12 @@ class SiteController extends Controller
     /**
      * @Route("/hippodromes", name="hippodromes")
      */
-    public function hippodromes()
-    {
-        return $this->render('site/hippodromes.html.twig');
+    public function hippodromes() {
+        $repo = $this->getDoctrine()->getRepository(Hippodrome::class);
+
+        $hippodromes = $repo->findBy([], ['nom' => 'ASC']);
+     
+        return $this->render('site/hippodromes.html.twig', ['controller_name' => 'SiteController', 'hippodromes' => $hippodromes]);
     }
 
     /**
@@ -109,6 +112,17 @@ class SiteController extends Controller
         }
 
         return $this->render('site/newHippodrome.html.twig', ['formHippodrome' => $formHippodrome->createView()]);
+    }
+
+    /**
+     * @Route("/site/hippodrome/{id}", name="hippodrome_detail")
+     */
+    public function hippodrome_detail($id) {
+        $repo = $this->getDoctrine()->getRepository(Hippodrome::class);
+
+        $hippodrome = $repo->find($id);
+
+        return $this->render('site/detail.html.twig', ['hippodrome' => $hippodrome]);
     }
 
     
