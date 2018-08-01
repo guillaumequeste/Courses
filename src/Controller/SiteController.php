@@ -2,6 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Cheval;
+use App\Form\ChevalType;
+use Symfony\Component\HttpFoundation\Request;
+use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -55,6 +59,32 @@ class SiteController extends Controller
     public function login()
     {
         return $this->render('security/login.html.twig');
+    }
+
+    /**
+     * @Route("/newCheval", name="newCheval")
+     */
+    public function createCheval(Request $request, ObjectManager $manager) {
+        $cheval = new Cheval();
+
+        $formCheval = $this->createFormBuilder($cheval)
+                           ->add('nom')
+                           ->add('commentaire')
+                           ->add('discipline')
+                           ->getForm();
+
+        $formCheval->handleRequest($request);
+
+        if($formCheval->isSubmitted() && $formCheval->isValid()) {
+            $cheval->setCreatedAt(new \DateTime("now"));
+
+            $manager->persist($cheval);
+            $manager->flush();
+
+            return $this->redirectToRoute('newCheval');
+        }
+
+        return $this->render('site/newCheval.html.twig', ['formCheval' => $formCheval->createView()]);
     }
 
     

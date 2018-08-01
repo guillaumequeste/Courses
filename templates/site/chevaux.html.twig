@@ -3,5 +3,10 @@
 {% block title %}Chevaux{% endblock %}
 
 {% block main %}
-    <h1>Chevaux</h1>
+    <div id="main_chevaux">
+        <h1>Chevaux</h1>
+
+        <a href="{{ path('newCheval') }}"><button class="btn btn-success">Enregistrer un nouveau cheval</button></a>
+
+    </div>
 {% endblock %}

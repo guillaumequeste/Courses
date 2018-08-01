@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chevaux{% endblock %}
+
+{% block main %}
+    <div id="main_chevaux">
+        <h1>Enregistrement d'un cheval</h1>
+
+        {{ form_start(formCheval) }}
+        {{ form_row(formCheval.nom, {'label': 'Nom', 'attr': {'placeholder': 'Nom'}}) }}
+        {{ form_row(formCheval.commentaire, {'label': 'Commentaire', 'attr': {'placeholder': 'Commentaire'}}) }}
+        {{ form_row(formCheval.discipline, {'label': 'Discipline', 'attr': {'placeholder': 'Discipline'}}) }}
+        <button type="submit" class="btn btn-success">Enregistrement</button>
+        {{ form_end(formCheval) }}
+
+    </div>
+{% endblock %}

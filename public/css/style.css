@@ -96,3 +96,14 @@ footer {
 #logo_logout {
     height: 60px;
 }
+
+
+/* chevaux.html.twig */
+
+#main_chevaux {
+    height: calc(100vh - 105px);
+    padding: 5%;
+    background-color: #948c81;
+    color: white;
+    font-family: 'Oleo Script', sans-serif;
+}

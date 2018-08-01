@@ -55,8 +55,5 @@ class SecurityController extends Controller
      */
     public function logout() {}
 
-        /**
-     * @Route("/inscription", name="registration")
-     */
-    
+     
 }
