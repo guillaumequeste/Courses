@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Oleo+Script');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Merry+Weather+Sans');
 
 /* base.html.twig */
 
@@ -181,4 +182,39 @@ thead {
     background-color: #948c81;
     color: white;
     font-family: 'Oleo Script', sans-serif;
+}
+
+
+/* detail.html.twig */
+
+#main_detail {
+    background-color: #948c81;
+    height: calc(100vh - 105px);
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-align: center;
+    padding-top: 1%;
+    font-size: large;
+}
+
+.titre_detail {
+    padding: 1%;
+    font-family: 'Merry Weather Sans', sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+#photo_dieppe {
+    width: 120%;
+    padding: 5% 0 0 5%;
+}
+
+#infos_dieppe_titres {
+    text-align: left;
+    font-weight: bold;
+}
+
+#infos_dieppe_infos {
+    text-align: left;
+    font-family: 'Merry Weather Sans', sans-serif;
 }
