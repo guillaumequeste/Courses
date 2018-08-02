@@ -61,6 +61,18 @@ class Hippodrome
      */
     private $createdAt;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $photo;
+
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $iframe_map;
+
+
     public function getId()
     {
         return $this->id;
@@ -173,4 +185,29 @@ class Hippodrome
 
         return $this;
     }
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(?string $photo): self
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+    public function getIframeMap(): ?string
+    {
+        return $this->iframe_map;
+    }
+
+    public function setIframeMap(?string $iframe_map): self
+    {
+        $this->iframe_map = $iframe_map;
+
+        return $this;
+    }
+
 }

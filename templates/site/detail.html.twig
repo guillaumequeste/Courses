@@ -4,39 +4,29 @@
 
 {% block main %}
     <div id="main_detail">
-        <h1 class="titre_detail">{{ hippodrome.nom }}</h1>
-        <div id="conteneur_dieppe" class="row">
-            <div class="col-4">
-                <img src="{{ asset('img/hippodrome_dieppe.jpg') }}" id="photo_dieppe">
+        <h1 id="titre_detail">{{ hippodrome.nom }}</h1>
+        <div id="conteneur_hippodrome">
+            <div id="div_paint">
+                <img src="{{ asset('img/paint.jpg') }}" id="paint">
             </div>
-            <div class="col-8 row">
-                <div class="offset-2 col-4">
-                    <div id="infos_dieppe_titres">
-                        <p>Piste : </p>
-                        <p>Corde : à </p>
-                        <p>Circonférence : </p>
-                        <p>Région : </p>
-                        <p>Département : </p>
-                        <p>Ville à proximité : </p>
-                        <p>Surnom : </p>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div id="infos_dieppe_infos">
-                        <p>{{ hippodrome.piste }}</p>
-                        <p>{{ hippodrome.corde }}</p>
-                        <p>{{ hippodrome.circonference }}</p>
-                        <p>{{ hippodrome.region }}</p>
-                        <p>{{ hippodrome.departement }}</p>
-                        <p>{{ hippodrome.ville }}</p>
-                        <p>{{ hippodrome.surnom }}</p>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20552.660521020447!2d1.0783881410669687!3d49.916025202293994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7d08e7450893d04d!2sHippodrome+de+Dieppe!5e0!3m2!1sfr!2sfr!4v1533202892287" width="700" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
+            <div id="hippodrome_titres">
+                <p>Piste : </p>
+                <p>Corde : à </p>
+                <p>Circonférence : </p>
+                <p>Région : </p>
+                <p>Département : </p>
+                <p>Ville à proximité : </p>
+                <p>Surnom : </p>
             </div>
-        </div>
-    </div>
-    
+            <div id="hippodrome_infos">
+                <p>{{ hippodrome.piste }}</p>
+                <p>{{ hippodrome.corde }}</p>
+                <p>{{ hippodrome.circonference }}</p>
+                <p>{{ hippodrome.region }}</p>
+                <p>{{ hippodrome.departement }}</p>
+                <p>{{ hippodrome.ville }}</p>
+                <p>{{ hippodrome.surnom }}</p>
+            </div> 
+        </div>    
+    </div> 
 {% endblock %}

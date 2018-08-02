@@ -34,7 +34,7 @@ a {
 }
 
 a:hover {
-    color: white;
+    color: orange;
     text-decoration: none;
 }
 
@@ -125,11 +125,13 @@ footer {
 /* hippodromes.html.twig */
 
 #main_hippodromes {
-    height: 410vh;
+    height: 340vh;
     padding: 1% 5% 5% 5%;
     background-color: #948c81;
     color: white;
     font-family: 'Oleo Script', sans-serif;
+    text-align: center;
+    font-size: x-large;
 }
 
 #conteneur {
@@ -155,22 +157,16 @@ footer {
     text-align: right;
 }
 
-.table {
-    font-family: 'Roboto', sans-serif;
+.a_liste {
     color: black;
 }
 
-thead {
-    color: #2C3E50;
-    font-size: large;
-}
-
-.a_table {
-    color: black;
-}
-
-.a_table:hover {
+.a_liste:hover {
     color: yellow;
+}
+
+#liste {
+    width: 25vh;
 }
 
 
@@ -190,31 +186,39 @@ thead {
 #main_detail {
     background-color: #948c81;
     height: calc(100vh - 105px);
-    font-family: 'Roboto', sans-serif;
     color: black;
     text-align: center;
     padding-top: 1%;
     font-size: large;
 }
 
-.titre_detail {
-    padding: 1%;
+#titre_detail {
     font-family: 'Merry Weather Sans', sans-serif;
     font-weight: bold;
-    color: black;
+    padding-bottom: 2%;
 }
 
-#photo_dieppe {
-    width: 120%;
+#conteneur_hippodrome {
+    display: flex;
+}
+
+#div_paint {
+    width: 100vh;
+}
+
+#paint {
+    width: 90%;
+}
+
+#hippodrome_titres {
+    font-family: 'Roboto' sans-serif;
+    font-weight: bold;
+    text-align: left;
     padding: 5% 0 0 5%;
 }
 
-#infos_dieppe_titres {
-    text-align: left;
-    font-weight: bold;
-}
-
-#infos_dieppe_infos {
-    text-align: left;
+#hippodrome_infos {
     font-family: 'Merry Weather Sans', sans-serif;
+    text-align: left;
+    padding: 5% 0 0 5%;
 }
