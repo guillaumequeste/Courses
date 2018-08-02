@@ -4,7 +4,21 @@
 
 {% block main %}
     <div id="main_hippodromes">
-        <h1>Hippodromes</h1>
+        <div id="conteneur">
+            <div class="element">
+                <img src="{{ asset('img/hippodrome-tourgeville.jpg') }}" class="mini">
+                <img src="{{ asset('img/cagnes.jpg') }}" class="mini">
+                <img src="{{ asset('img/strasbourg.jpg') }}" class="mini">
+            </div>
+            <div class="element" id="element_titre">
+                <h1 id="titre_hippodromes">Hippodromes visités</h1>
+            </div>
+            <div class="element" id="element_paint">
+                <img src="{{ asset('img/marseille_borely.jpg') }}" class="mini">
+                <img src="{{ asset('img/saint_cloud.jpg') }}" class="mini">
+                <img src="{{ asset('img/paint.jpg') }}" class="mini">
+            </div>
+        </div>
         <table class="table">
             <thead>
                 <tr>

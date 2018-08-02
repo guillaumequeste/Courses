@@ -124,11 +124,34 @@ footer {
 /* hippodromes.html.twig */
 
 #main_hippodromes {
-    height: 400vh;
+    height: 410vh;
     padding: 1% 5% 5% 5%;
     background-color: #948c81;
     color: white;
     font-family: 'Oleo Script', sans-serif;
+}
+
+#conteneur {
+    display: flex;
+    margin-bottom: 1%;
+}
+
+.element {
+    margin: auto;
+    width: 50%;
+}
+
+.mini {
+    width: 30%;
+    height: 100px;
+}
+
+#element_titre {
+    text-align: center;
+}
+
+#element_paint {
+    text-align: right;
 }
 
 .table {
