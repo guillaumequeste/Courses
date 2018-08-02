@@ -103,7 +103,8 @@ footer {
 /* chevaux.html.twig */
 
 #main_chevaux {
-    height: calc(100vh - 105px);
+    height: 240vh;
+    ;
     padding: 2%;
     background-color: #948c81;
     color: white;
