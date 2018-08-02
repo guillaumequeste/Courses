@@ -104,10 +104,16 @@ footer {
 
 #main_chevaux {
     height: calc(100vh - 105px);
-    padding: 5%;
+    padding: 2%;
     background-color: #948c81;
     color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#titre_chevaux {
+    text-align: center;
     font-family: 'Oleo Script', sans-serif;
+    padding-bottom: 2%;
 }
 
 
@@ -125,7 +131,7 @@ footer {
 /* hippodromes.html.twig */
 
 #main_hippodromes {
-    height: 340vh;
+    height: 460vh;
     padding: 1% 5% 5% 5%;
     background-color: #948c81;
     color: white;

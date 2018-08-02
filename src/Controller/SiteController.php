@@ -36,7 +36,11 @@ class SiteController extends Controller
      */
     public function chevaux()
     {
-        return $this->render('site/chevaux.html.twig');
+        $repo = $this->getDoctrine()->getRepository(Cheval::class);
+
+        $chevaux = $repo->findBy([], ['nom' => 'ASC']);
+        
+        return $this->render('site/chevaux.html.twig', ['controller_name' => 'SiteController', 'chevaux' => $chevaux]);
     }
 
     /**

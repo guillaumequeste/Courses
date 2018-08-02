@@ -4,7 +4,26 @@
 
 {% block main %}
     <div id="main_chevaux">
-        <h1>Chevaux</h1>
+        <h1 id="titre_chevaux">Chevaux</h1>
+
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Discipline</th>
+                    <th scope="col">Commentaire</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for cheval in chevaux %}
+                <tr>
+                <td>{{ cheval.nom }}</td>
+                <td>{{ cheval.discipline }}</td>
+                <td>{{ cheval.commentaire }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
         <a href="{{ path('newCheval') }}"><button class="btn btn-success">Enregistrer un nouveau cheval</button></a>
 
