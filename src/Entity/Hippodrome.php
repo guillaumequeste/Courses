@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\HippodromeRepository")
@@ -23,6 +24,10 @@ class Hippodrome
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *  min=2,
+     *  minMessage="L'username doit comporter au moins {{ limit }} caractères"
+     * )
      */
     private $piste;
 

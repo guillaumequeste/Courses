@@ -40,6 +40,14 @@ class SiteController extends Controller
     }
 
     /**
+     * @Route("/credits", name="credits")
+     */
+    public function credits()
+    {
+        return $this->render('site/credits.html.twig');
+    }
+
+    /**
      * @Route("/hippodromes", name="hippodromes")
      */
     public function hippodromes() {

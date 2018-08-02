@@ -159,10 +159,27 @@ footer {
 
 .a_liste {
     color: black;
+    position: relative;
+    margin-top: 20px;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .a_liste:hover {
     color: yellow;
+}
+
+.a_liste:hover:after {
+    content: "+ d'infos sur l'hippodrome";
+    display: inline-block;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    padding: 0 10px;
+    position: absolute;
+    bottom: 60%;
+    width: 130px;
+    font-size: 18px;
 }
 
 #liste {
@@ -221,4 +238,16 @@ footer {
     font-family: 'Merry Weather Sans', sans-serif;
     text-align: left;
     padding: 5% 0 0 5%;
+}
+
+
+/* credits.html.twig */
+
+#main_credits {
+    height: calc(100vh - 105px);
+    padding: 5%;
+    background-color: #948c81;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
 }
