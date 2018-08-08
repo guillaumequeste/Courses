@@ -103,8 +103,7 @@ footer {
 /* chevaux.html.twig */
 
 #main_chevaux {
-    height: 240vh;
-    ;
+    height: 250vh;
     padding: 2%;
     background-color: #948c81;
     color: white;
@@ -115,6 +114,10 @@ footer {
     text-align: center;
     font-family: 'Oleo Script', sans-serif;
     padding-bottom: 2%;
+}
+
+#button_newCheval {
+    font-family: 'Oleo Script', sans-serif;
 }
 
 
