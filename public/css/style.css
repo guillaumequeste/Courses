@@ -103,7 +103,7 @@ footer {
 /* chevaux.html.twig */
 
 #main_chevaux {
-    height: 250vh;
+    height: 350vh;
     padding: 2%;
     background-color: #948c81;
     color: white;
@@ -135,7 +135,7 @@ footer {
 /* hippodromes.html.twig */
 
 #main_hippodromes {
-    height: 460vh;
+    height: 560vh;
     padding: 1% 5% 5% 5%;
     background-color: #948c81;
     color: white;
@@ -200,7 +200,7 @@ footer {
 /* newHippodrome.html.twig */
 
 #main_newHippodrome {
-    height: 110vh;
+    height: 150vh;
     padding: 1% 5% 5% 5%;
     background-color: #948c81;
     color: white;
